@@ -8,7 +8,17 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
-var buttomtext;
+constructor(props) {
+							 super(props);
+							 this.state = {class: "off", label: "Нажми"};
+
+							 this.press = this.press.bind(this);
+					 }
+press(){
+			 let className = (this.state.class==="off")?"on":"off";
+			 this.setState({class: className});
+	 }
+
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>VKMINI - APPS</PanelHeader>
@@ -39,15 +49,13 @@ const Home = ({ id, go, fetchedUser }) => (
 					Show me the Persik, please
 				</Button>
 
-				handleClick = () => {
-      buttomtext = "CLICKED";
-    }
 
-    render(){
-      return (
-        <Button onClick={this.handleClick}>{this.buttomtext}</Button>
-      )
-    }
+           render() {
+               return <button onClick={this.press} className={this.state.class}>{this.state.label}</button>;
+           }
+
+
+
 			</Div>
 		</Group>
 	</Panel>
