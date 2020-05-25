@@ -36,8 +36,8 @@ const Home = ({ id, go, fetchedUser }) => (
 				<Button size="xl" level="2" onClick={go} data-to="persik">
 					Show me the Persik, please
 				</Button>
-				<Button size="xl" level="2" onClick={handleClick}>
-					Show me the Persik, please
+				<Button size="x2" level="3" onClick={handleClick}>
+					button
 				</Button>
 				<p id="textID">textID</p>
 			</Div>
