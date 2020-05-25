@@ -13,6 +13,7 @@ import green from '../img/green.png';
 import magicball from '../img/Magic_ball.png';
 import red from '../img/red.png';
 import yellow from '../img/yellow.png';
+import './Persik.css';
 
 function handleClick() {
 	const posts = [
@@ -66,8 +67,8 @@ const Home = ({ id, go, fetchedUser }) => (
 					Random
 				</Button>
 				<p id="textID">textID</p>
-				<div style="background:{blue} no-repeat;height:imageheight px;width:imagewidth px">
-<img src={magicball} alt="Persik The Cat"/>
+				<div style="picture1">
+<img src={red} alt="Persik The Cat"/>
 				</div>
 			</Div>
 		</Group>

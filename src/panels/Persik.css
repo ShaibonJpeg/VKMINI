@@ -4,3 +4,10 @@
   max-width: 240px;
   margin: 20px auto;
 }
+div.picture1 {
+   width:auto;; /*width of your image*/
+   height:auto;; /*height of your image*/
+   background-image:url('../img/Magic_ball.png');
+   margin:0; /* If you want no margin */
+   padding:0; /*if your want to padding */
+}
