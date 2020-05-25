@@ -8,11 +8,12 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
+
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Example</PanelHeader>
+		<PanelHeader>VKMINI - APPS</PanelHeader>
 		{fetchedUser &&
-		<Group title="User Data Fetched with VK Bridge">
+		<Group>
 			<Cell
 				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
 				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
@@ -24,6 +25,24 @@ const Home = ({ id, go, fetchedUser }) => (
 		<Group title="Navigation Example">
 			<Div>
 				<Button size="xl" level="2" onClick={go} data-to="persik">
+					Show me the Persik, please
+				</Button>
+				<Button id = "Random" size="xl" level="2" onClick={() =>
+					{
+						var arr = [
+												"first",
+												"second",
+												"third",
+												"foure"
+											];
+							if(this.textContent != 'Lock')
+							{
+								document.getElementById(Random).textContent = 'Lock';
+							}
+							else {
+								this.textContent = 'Lock';
+							}
+					}}>
 					Show me the Persik, please
 				</Button>
 			</Div>
@@ -39,6 +58,9 @@ Home.propTypes = {
 		first_name: PropTypes.string,
 		last_name: PropTypes.string,
 		city: PropTypes.shape({
+			title: PropTypes.string,
+		}),
+		country: PropTypes.shape({
 			title: PropTypes.string,
 		}),
 	}),
