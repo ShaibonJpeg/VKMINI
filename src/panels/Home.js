@@ -67,9 +67,9 @@ const Home = ({ id, go, fetchedUser }) => (
 					Random
 				</Button>
 				<p id="textID">textID</p>
-				<div style="picture1">
+				<Div style="picture1">
 <img src={red} alt="Persik The Cat"/>
-				</div>
+				</Div>
 			</Div>
 		</Group>
 	</Panel>
