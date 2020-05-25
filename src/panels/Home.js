@@ -17,8 +17,8 @@ function handleClick() {
 						];
 	var min = 0;
 	var max = arr.length;
-	let rand = min - 0.5 + Math.random() * (max - min + 1);
-	document.getElementById("textID").textContent = arr[Math.round(rand)];
+	let rand = min + Math.random() * (max + 1 - min);
+	document.getElementById("textID").textContent = arr[Math.floor(rand)];
 }
 
 const Home = ({ id, go, fetchedUser }) => (
