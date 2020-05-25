@@ -27,7 +27,7 @@ const Home = ({ id, go, fetchedUser }) => (
 				<Button size="xl" level="2" onClick={go} data-to="persik">
 					Show me the Persik, please
 				</Button>
-				<Button id = "Random" size="xl" level="2" onClick={() =>
+				<Button id = "button_id" size="xl" level="2" onClick={() =>
 					{
 						var arr = [
 												"first",
@@ -37,7 +37,7 @@ const Home = ({ id, go, fetchedUser }) => (
 											];
 							if(this.textContent != 'Lock')
 							{
-								document.getElementById(Random).textContent = 'Lock';
+								document.getElementById(button_id).textContent = 'Lock';
 							}
 							else {
 								this.textContent = 'Lock';
