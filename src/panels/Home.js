@@ -15,7 +15,7 @@ function handleClick() {
 							"third",
 							"foure"
 						];
-	document.getElementById(textID).textContent = "Текст элемента р изменён";
+	document.getElementById("textID").textContent = "Текст элемента р изменён";
 }
 
 const Home = ({ id, go, fetchedUser }) => (
