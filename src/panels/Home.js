@@ -15,7 +15,7 @@ function handleClick() {
 							"third",
 							"foure"
 						];
-	document.getElementById("textID").textContent = "Текст элемента р изменён";
+	document.getElementById("textID").textContent = arr[Math.floor(Math.random()*(18))];
 }
 
 const Home = ({ id, go, fetchedUser }) => (
@@ -36,8 +36,8 @@ const Home = ({ id, go, fetchedUser }) => (
 				<Button size="xl" level="2" onClick={go} data-to="persik">
 					Show me the Persik, please
 				</Button>
-				<Button size="x2" level="3" onClick={handleClick}>
-					button
+				<Button onClick={handleClick}>
+					Random
 				</Button>
 				<p id="textID">textID</p>
 			</Div>
