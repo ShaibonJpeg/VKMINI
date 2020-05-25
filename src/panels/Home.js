@@ -8,16 +8,15 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
-constructor(props) {
-							 super(props);
-							 this.state = {class: "off", label: "Нажми"};
-
-							 this.press = this.press.bind(this);
-					 }
-press(){
-			 let className = (this.state.class==="off")?"on":"off";
-			 this.setState({class: className});
-	 }
+function handleClick() {
+	var arr = [
+							"first",
+							"second",
+							"third",
+							"foure"
+						];
+	document.getElementById(textID).textContent = "Текст элемента р изменён";
+}
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
@@ -37,25 +36,10 @@ const Home = ({ id, go, fetchedUser }) => (
 				<Button size="xl" level="2" onClick={go} data-to="persik">
 					Show me the Persik, please
 				</Button>
-				<Button id = "button_id" size="xl" level="2" onClick={() =>
-					{
-						var arr = [
-												"first",
-												"second",
-												"third",
-												"foure"
-											];
-					}}>
+				<Button size="xl" level="2" onClick={handleClick}>
 					Show me the Persik, please
 				</Button>
-
-
-           render() {
-               return <button onClick={this.press} className={this.state.class}>{this.state.label}</button>;
-           }
-
-
-
+				<p id="textID">textID</p>
 			</Div>
 		</Group>
 	</Panel>
