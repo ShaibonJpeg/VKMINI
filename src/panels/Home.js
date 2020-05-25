@@ -8,7 +8,7 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
-
+var buttomtext;
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>VKMINI - APPS</PanelHeader>
@@ -38,18 +38,14 @@ const Home = ({ id, go, fetchedUser }) => (
 					}}>
 					Show me the Persik, please
 				</Button>
+
 				handleClick = () => {
-					this.state = {
-        buttonText: "Start"
-      }
-      console.log("Button clicked...")
-      let buttonText = this.state.buttonText == "Start" ? "Stop" : "Start"
-      this.setState({buttonText: buttonText})
+      buttomtext = "CLICKED";
     }
 
     render(){
       return (
-        <Button onClick={this.handleClick}>{this.state.buttonText}</Button>
+        <Button onClick={this.handleClick}>{this.buttomtext}</Button>
       )
     }
 			</Div>
