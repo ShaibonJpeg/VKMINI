@@ -35,16 +35,23 @@ const Home = ({ id, go, fetchedUser }) => (
 												"third",
 												"foure"
 											];
-							if(this.textContent != 'Lock')
-							{
-								document.getElementById(button_id).textContent = 'Lock';
-							}
-							else {
-								this.textContent = 'Lock';
-							}
 					}}>
 					Show me the Persik, please
 				</Button>
+				handleClick = () => {
+					this.state = {
+        buttonText: "Start"
+      }
+      console.log("Button clicked...")
+      let buttonText = this.state.buttonText == "Start" ? "Stop" : "Start"
+      this.setState({buttonText: buttonText})
+    }
+
+    render(){
+      return (
+        <Button onClick={this.handleClick}>{this.state.buttonText}</Button>
+      )
+    }
 			</Div>
 		</Group>
 	</Panel>
