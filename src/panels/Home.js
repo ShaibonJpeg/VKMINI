@@ -16,8 +16,8 @@ function handleClick() {
 							"foure"
 						];
 	var min = 0;
-	var max = arr.length-1;
-	let rand = min + Math.random() * (max + 1 - min);
+	var max = 3;
+	let rand = Math.random() * (4);
 	document.getElementById("textID").textContent = arr[Math.floor(rand)];
 }
 
