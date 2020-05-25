@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageBackground from 'react-native';
 import PropTypes from 'prop-types';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
@@ -63,13 +64,22 @@ const Home = ({ id, go, fetchedUser }) => (
 				<Button size="xl" level="2" onClick={go} data-to="persik">
 					Show me the Persik, please
 				</Button>
-				<Button onClick={handleClick}>
+				<Button size="xl" level="2" onClick={handleClick}>
 					Random
 				</Button>
+				<img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"/>
 				<p id="textID">textID</p>
-				<Div style="picture1">
-<img src={red} alt="Persik The Cat"/>
-				</Div>
+
+				<ImageBackground
+				            style={{
+				              width: auto,
+				              height: auto,
+				              resizeMode: 'contain',
+				              borderTopLeftRadius: 10,
+				              borderTopRightRadius: 10,
+				            }}
+				            source={red}
+				          />
 			</Div>
 		</Group>
 	</Panel>

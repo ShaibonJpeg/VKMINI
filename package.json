@@ -19,6 +19,7 @@
     "react-scripts": "^3.4.1"
   },
   "dependencies": {
+    "@material-ui/core": "^4.10.0",
     "@vkontakte/icons": "^1.18.2",
     "@vkontakte/vk-bridge": "^2.2.2",
     "@vkontakte/vk-miniapps-deploy": "0.0.17",
@@ -33,7 +34,8 @@
     "mysql": "^2.18.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-native": "^0.62.2"
   },
   "browserslist": {
     "production": [
